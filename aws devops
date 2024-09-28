@@ -1,0 +1,26 @@
+To generate a ssh key
+ssh-keygen -t rsa -b 4096 -f <file-name>
+
+To connect to aws server 
+ssh -i <private-key> ec2-user@<public ip-address>
+
+create & delete
+----------
+
+to create a directory --
+mkdir <directory-name>
+
+to create a file --
+touch <file-name>
+
+to delete a directory or file --
+rm <file-name>
+rm -r <directory-name>
+
+to download file or software in linux --
+wget <url>
+
+to see the content on the url --
+curl <url>
+
+
