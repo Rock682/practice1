@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTB Pilgrim Auto Fill</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>TTB Pilgrim Auto Fill</h1>
+      <p class="hint">Save a pilgrim profile, then click autofill on any booking page.</p>
+
+      <label>
+        Profile name
+        <input id="profileName" type="text" placeholder="Primary Pilgrim" />
+      </label>
+
+      <label>
+        Full name
+        <input id="fullName" type="text" placeholder="Enter full name" />
+      </label>
+
+      <div class="row">
+        <label>
+          Age
+          <input id="age" type="number" min="0" max="120" />
+        </label>
+
+        <label>
+          Gender
+          <select id="gender">
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Date of birth
+        <input id="dob" type="date" />
+      </label>
+
+      <label>
+        Mobile number
+        <input id="mobile" type="tel" placeholder="10-digit mobile" />
+      </label>
+
+      <label>
+        Email
+        <input id="email" type="email" placeholder="name@example.com" />
+      </label>
+
+      <label>
+        ID Proof Type
+        <input id="idType" type="text" placeholder="Aadhaar / Passport / PAN" />
+      </label>
+
+      <label>
+        ID Proof Number
+        <input id="idNumber" type="text" placeholder="Document number" />
+      </label>
+
+      <label>
+        Address
+        <textarea id="address" rows="2" placeholder="Street, city, state"></textarea>
+      </label>
+
+      <div class="row">
+        <label>
+          Typing speed
+          <select id="typingDelay">
+            <option value="40">Fast</option>
+            <option value="70" selected>Normal</option>
+            <option value="120">Slow</option>
+          </select>
+        </label>
+        <label class="checkbox">
+          <span>Human-like fill</span>
+          <input id="humanMode" type="checkbox" checked />
+        </label>
+      </div>
+
+      <div class="row actions">
+        <button id="saveBtn" type="button">Save Profile</button>
+        <button id="fillBtn" type="button">Autofill This Page</button>
+      </div>
+
+      <label>
+        Saved profiles
+        <select id="profiles"></select>
+      </label>
+
+      <div class="row actions">
+        <button id="loadBtn" type="button">Load</button>
+        <button id="deleteBtn" type="button" class="danger">Delete</button>
+      </div>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
