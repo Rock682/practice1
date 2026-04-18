@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "TTB Pilgrim Auto Fill",
+  "description": "Save pilgrim details and quickly auto-fill booking forms.",
+  "version": "1.0.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_title": "TTB Pilgrim Auto Fill",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
